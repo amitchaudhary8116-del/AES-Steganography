@@ -25,7 +25,7 @@ message + password                        stego_image.png + password
                                           original message
 ```
 
-## Project structure
+## 1 Project structure
 
 ```
 secure_comm_system/
@@ -37,39 +37,6 @@ secure_comm_system/
 ├── sample_cover.png        # A sample image to test with
 └── README.md
 ```
-
-## 1. Setup in VS Code
-
-### Install VS Code extensions
-Open the Extensions panel (`Ctrl+Shift+X` / `Cmd+Shift+X`) and install:
-
-| Extension | Publisher | Why you need it |
-|---|---|---|
-| **Python** | Microsoft | Core Python support: run/debug, IntelliSense, environment selection |
-| **Pylance** | Microsoft | Fast type checking & autocomplete (usually bundled with Python extension) |
-| **Python Debugger** | Microsoft | Lets you set breakpoints and step through the code |
-| **Even Better TOML** *(optional)* | tamasfe | Nice-to-have if you later add `pyproject.toml` |
-| **Rainbow CSV** *(optional)* | mechatroner | Handy if you extend the project to log results to CSV |
-
-The only *required* ones are **Python**, **Pylance**, and **Python Debugger** — install those from the Extensions marketplace and select your Python interpreter with `Ctrl+Shift+P` → "Python: Select Interpreter".
-
-### Install dependencies
-Open a terminal in VS Code (`` Ctrl+` ``) inside the project folder and run:
-
-```bash
-python -m venv venv
-# Windows:
-venv\Scripts\activate
-# macOS/Linux:
-source venv/bin/activate
-
-pip install -r requirements.txt
-```
-
-> Note: this project uses the `cryptography` library for AES (rather than
-> `pycryptodome`) — it's actively maintained, audited, and installs cleanly
-> on all platforms with no extra build tools.
-
 ## 2. How to run
 
 ### Step 1 — Sender: encrypt & hide the message
